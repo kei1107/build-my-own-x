@@ -2,8 +2,13 @@
   "name": "my-torrent",
   "version": "1.0.0",
   "description": "A bittorrent client for education purposes!",
-  "main": "index.js",
+  "main": "dist/index.js",
+  "files": [
+    "dist"
+  ],
   "scripts": {
+    "build": "tsc",
+    "start": "node .",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "keisuke kimura",
@@ -11,5 +16,11 @@
   "dependencies": {
     "bencode": "^2.0.1",
     "bignum": "^0.13.1"
+  },
+  "devDependencies": {
+    "@types/bencode": "^2.0.0",
+    "@types/bignum": "0.0.29",
+    "@types/node": "^13.13.5",
+    "typescript": "^3.8.3"
   }
 }
