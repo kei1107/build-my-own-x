@@ -1,9 +1,5 @@
-import * as fs from 'fs';
-import * as bencode from 'bencode';
-import * as tracker from './tracker';
-import * as torrentParser from './torrent-parser';
+import * as torrentParser from './tools/torrent-parser';
+import * as download from './tools/download';
 
-const torrent: any = torrentParser.open('puppy2.torrent');
-tracker.getPeers(torrent, peers=>{
-    console.log('list of peers: ',peers);
-});
+const torrent: any = torrentParser.open(process.argv[2]);
+download.start(torrent, torrent.info.name);
