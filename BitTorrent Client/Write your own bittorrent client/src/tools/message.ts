@@ -71,7 +71,7 @@ const buildHave = (payload: number): Buffer => {
     return buf;
 };
 
-/* TODO : make bitfield type 
+/* TODO : make bitfield type
 const buildBitfield = (payload: bitfield): Buffer => {
     const buf: Buffer = Buffer.alloc(14);
     // length
@@ -163,7 +163,7 @@ const parse = (msg: Buffer): ParseType => {
             const rest: Buffer = payload.slice(8);
             ret_payload = {
                 index: payload.readInt32BE(0),
-                begin: payload.readInt32BE(0),
+                begin: payload.readInt32BE(4),
                 block: null,
                 length: null
             };

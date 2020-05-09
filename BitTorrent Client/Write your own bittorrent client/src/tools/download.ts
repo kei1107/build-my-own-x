@@ -57,7 +57,7 @@ function msgHandler(msg: Buffer, socket: net.Socket, pieces: Pieces, queue: Queu
 };
 function isHandshake(msg: Buffer) {
     return msg.length === msg.readUInt8(0) + 49 &&
-        msg.toString('utf8', 1) === 'BitTorrent protocol';
+        msg.toString('utf8', 1, 20) === 'BitTorrent protocol';
 };
 
 function chokeHandler(socket: net.Socket) {
