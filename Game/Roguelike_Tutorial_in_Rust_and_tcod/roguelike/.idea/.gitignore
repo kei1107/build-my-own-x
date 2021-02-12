@@ -2,7 +2,7 @@
 /shelf/
 /workspace.xml
 # Datasource local storage ignored files
-/dataSources/
+/../../../../../../../:\git-workspace\build-my-own-x\Game\Roguelike_Tutorial_in_Rust_and_tcod\roguelike\.idea/dataSources/
 /dataSources.local.xml
 # Editor-based HTTP Client requests
 /httpRequests/
